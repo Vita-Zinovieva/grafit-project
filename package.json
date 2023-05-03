@@ -7,5 +7,8 @@
   },
   "devDependencies": {
     "parcel": "latest"
+  },
+  "dependencies": {
+    "posthtml-doctype": "^1.1.1"
   }
 }
