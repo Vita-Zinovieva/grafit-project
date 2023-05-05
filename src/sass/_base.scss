@@ -1,9 +1,10 @@
 body {
-  height: 100%;
-  line-height: 1;
-  font-family: NotoSerifTC;
-  font-size: 16px;
-  line-height: 2;
-  flex-direction: column;
-  display: flex;
+    height: 100%;
+    line-height: 1;
+    font-family: NotoSerifTC;
+    font-size: 16px;
+    line-height: 2;
+    flex-direction: column;
+    display: flex;
+    color: $primary-text-color;
 }

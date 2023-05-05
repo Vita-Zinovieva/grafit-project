@@ -1,0 +1,130 @@
+.container {
+}
+
+.wrapper {
+    background-color: $form-background-color;
+    border-radius: 4px;
+    padding-left: 9px;
+    padding-right: 9px;
+    position: relative;
+}
+
+.form-title {
+    padding-top: 13px;
+    margin-bottom: 21px;
+    font-family: "MabryPro";
+    font-weight: 500;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-size: 14px;
+    line-height: 2.28;
+    border-bottom: 1px solid #e2e001;
+    text-indent: 10px;
+    &:not(:last-of-type) {
+        margin-bottom: 24px;
+    }
+}
+.form-input {
+    background-color: transparent;
+    outline: none;
+    font-size: 14px;
+    line-height: 2.28;
+    font-family: "NotoSerifTC";
+    padding-left: 10px;
+    // width: 200px;
+}
+
+.form-note {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    font-size: 10px;
+    line-height: 2.4;
+    text-align: center;
+}
+
+.form-btn {
+    margin: 0 auto 24px auto;
+    padding: 8px 24px;
+    width: 273px;
+    height: 37px;
+    font-size: 16px;
+    font-family: "NotoSerifTC";
+    background-color: #e2e001;
+    border-radius: 2px;
+}
+
+/**
+  FORM MODAL----------------------------------------------------------------------
+*/
+
+.is-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.backdrop {
+    background-color: $form-background-color;
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 348px;
+    height: 407px;
+    transform: translate(-50%, -50%);
+}
+
+.modal-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: inherit;
+    height: inherit;
+}
+.icon-wrapper {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+
+    position: absolute;
+    top: 12px;
+    right: 24px;
+}
+
+.from-modal-text {
+    padding: 0 30px;
+    font-family: "MabryPro";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: 1.5px;
+
+    // display: flex;
+    // align-items: center;
+    text-align: center;
+}
+
+.form-icon-close {
+    cursor: pointer;
+}
+
+.spiner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

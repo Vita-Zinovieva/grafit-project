@@ -1,3 +1,59 @@
 <section>
-    <from></from>
+    <div class="container">
+        <div class="wrapper">
+            <h2 class="form-title">ЗАПИС</h2>
+            <form class="form" id="contact-form">
+                <label class="form-label"
+                    >Ім’я:
+                    <input class="form-input" type="text" name="name" />
+                </label>
+
+                <label class="form-label"
+                    >Тел:
+                    <input class="form-input" type="text" name="phone" id="phone" placeholder="+38" />
+                </label>
+
+                <label class="form-label"
+                    >Тренування:
+                    <input class="form-input" type="text" name="training" />
+                </label>
+
+                <label class="form-label"
+                    >Дата:
+                    <input class="form-input" type="date" name="date" id="date" />
+                </label>
+
+                <label class="form-label"
+                    >E-mail:
+                    <input class="form-input" type="email" name="email" />
+                </label>
+                <p class="form-note">*ми обіцяємо не спамити</p>
+
+                <button class="form-btn" type="submit">тренуватись</button>
+            </form>
+            <!-- Modal window -->
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal-wrapper">
+                    <button class="icon-wrapper is-hidden" data-modal-close>
+                        <svg class="form-icon-close" width="24" height="24">
+                            <use href="./images/icons/sprite.svg#icon-close"></use>
+                        </svg>
+                    </button>
+                    <!-- Show if fulfilled -->
+                    <p class="from-modal-text is-hidden" data-resolve>Дякуємо за замовлення! Ми зв’яжемось з вами найближчим часом.</p>
+                    <!-- Show if rejected -->
+                    <p class="from-modal-text is-hidden" data-error>
+                        🙁 <br />
+                        Вибачте щось пішло не так Зателефонуйте нам або спробуйте пізніше
+                    </p>
+                </div>
+            </div>
+            <!-- Show Spiner -->
+            <div class="spiner is-hidden" data-spiner>
+                <div class="spinner-border text-warning" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
