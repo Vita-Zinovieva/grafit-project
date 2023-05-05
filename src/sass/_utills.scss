@@ -1,28 +1,23 @@
-
 @font-face {
   font-family: "MabryPro";
-  src: url("../fonts/MabryPro-Medium.ttf") format("truetype"), 
-  url("../fonts/MabryPro-Medium.woff2") format("woff"), 
-  url("../fonts/MabryPro-Medium.woff") format("woff"),
-  
-  url("../fonts/MabryPro-Regular.ttf") format("truetype"), 
-  url("../fonts/MabryPro-Regular.woff2") format("woff"),
-  url("../fonts/MabryPro-Regular.woff") format("woff"),
+  src: url("../fonts/MabryPro-Medium.ttf") format("truetype"),
+    url("../fonts/MabryPro-Medium.woff2") format("woff"),
+    url("../fonts/MabryPro-Medium.woff") format("woff"),
+    url("../fonts/MabryPro-Regular.ttf") format("truetype"),
+    url("../fonts/MabryPro-Regular.woff2") format("woff"),
+    url("../fonts/MabryPro-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "NotoSerifTC";
-  src: url("../fonts/NotoSerifTC-Regular-Alphabetic.ttf") format("truetype"), 
-  url("../fonts/NotoSerifTC-Regular-Alphabetic.woff2") format("woff"), 
-  url("../fonts/NotoSerifTC-Regular-Alphabetic.woff2") format("woff");
+  src: url("../fonts/NotoSerifTC-Regular-Alphabetic.ttf") format("truetype"),
+    url("../fonts/NotoSerifTC-Regular-Alphabetic.woff2") format("woff"),
+    url("../fonts/NotoSerifTC-Regular-Alphabetic.woff2") format("woff");
 }
 
-
-  $current-color: #E2E001;
-  $primary-text-color: #24282B;
-  $footer-text-color: #F7F7F6;
-  $background-color: #F5F5F5;
-  $footer-background-color: #24282B;
-  $form-background-color: #EEEEED;
-  $time: 250ms;
-
-
+$current-color: #e2e001;
+$primary-text-color: #24282b;
+$footer-text-color: #f7f7f6;
+$background-color: #f5f5f5;
+$footer-background-color: #24282b;
+$form-background-color: #eeeeed;
+$time: 250ms;
