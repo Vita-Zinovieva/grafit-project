@@ -1,45 +1,51 @@
 import Swiper, { Navigation } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
 
-// Now you can use all slider methods like
+const swiperRef = document.querySelector('.swiper');
+const { clientWidth } = document.documentElement;
 
-// const swiper = new Swiper(".swiper", {
-//   spaceBetween: 24,
-//   centeredSlides: true,
-//   slidesPerView: 3,
-//   loop: true,
-//   height: 664,
-//   width: 1861,
+// Swiper options for breakpoints:
 
-//   modules: [Navigation],
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   //   breakpoints: {
-//   //     // when window width is >= 320px
-//   //     320: {
-//   //       slidesPerView: 2,
-//   //       spaceBetween: 20,
-//   //     },
-//   //     // when window width is >= 480px
-//   //     480: {
-//   //       slidesPerView: 3,
-//   //       spaceBetween: 30,
-//   //     },
-//   //     // when window width is >= 640px
-//   //     640: {
-//   //       slidesPerView: 4,
-//   //       spaceBetween: 40,
-//   //     },
-//   //   },
-// });
+let swiperWidth = 0;
+let slidesPerView = 3;
+let spaceBetween = 24;
+let arrows = true;
+
+let size = 30;
+let top = 294 + size;
+let side = -Math.abs(size + 20);
+
+if (clientWidth >= 1920) {
+  swiperWidth = 1758;
+} else if (clientWidth >= 1440) {
+  swiperWidth = 1279;
+
+  top = 238 + size;
+  side = -Math.abs(size + 17);
+} else if (clientWidth >= 768) {
+  swiperWidth = 704;
+  slidesPerView = 2;
+  spaceBetween = 16;
+
+  size = 20;
+  top = 212 + size;
+  side = -Math.abs(size + 6);
+} else {
+  swiperWidth = 358;
+  slidesPerView = 2;
+  spaceBetween = 16;
+  arrows = false;
+}
+console.log(swiperWidth);
+
+// Swiper initialization with breakpoints values:
 
 const swiper = new Swiper('.swiper', {
-  slidesPerView: 3,
+  autoHeight: true,
   loop: true,
+  width: swiperWidth,
+  slidesPerView,
+  spaceBetween,
 
   modules: [Navigation],
   navigation: {
@@ -47,3 +53,21 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+// Options for arrows with breakpoints:
+
+swiper.navigation.nextEl[0].style.top = `${top}px`;
+swiper.navigation.nextEl[0].style.right = `${side}px`;
+swiper.navigation.nextEl[0].style.width = `${size}px`;
+swiper.navigation.nextEl[0].style.height = `${size}px`;
+
+swiper.navigation.prevEl[0].style.top = `${top}px`;
+swiper.navigation.prevEl[0].style.left = `${side}px`;
+swiper.navigation.prevEl[0].style.width = `${size}px`;
+swiper.navigation.prevEl[0].style.height = `${size}px`;
+
+swiperRef.style = `width: ${swiperWidth}px; position:static`;
+if (!arrows) {
+  swiper.navigation.nextEl[0].style = `display: none;`;
+  swiper.navigation.prevEl[0].style = `display: none`;
+}

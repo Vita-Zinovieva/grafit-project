@@ -20,40 +20,46 @@
   align-items: center;
   justify-content: center;
 
-  margin-top: 120px;
-  margin-bottom: 120px;
+  margin: 120px auto;
 }
 
 .gallery__title {
   font-family: 'Mabry Pro';
   font-weight: 500;
-  font-size: 24px;
-  line-height: calc(32 / 24);
+  font-size: 20px;
+  line-height: calc(32 / 20);
+  letter-spacing: 5px;
+
+  margin-bottom: 48px;
 
   text-align: center;
-  letter-spacing: 29px;
 
   color: $primary-text-color;
 
-  margin-bottom: 80px;
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+    letter-spacing: 15px;
+
+    margin-bottom: 56px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    letter-spacing: 29px;
+
+    margin-bottom: 80px;
+  }
 }
-
-// .swiper {
-// }
-
-// .swiper-wrapper {
-// }
 
 .swiper {
   width: 100%;
   height: 100%;
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.swiper-wrapper {
+  width: 1758px;
+}
+
+.swiper-arrows-wrapper {
+  position: relative;
 }
