@@ -11,16 +11,33 @@ input[type='number']:focus {
   -moz-appearance: textfield;
 }
 
-.wrapper {
+.send-form {
   background-color: $form-background-color;
+  @media screen and (min-width: $laptop) {
+    background-color: transparent;
+  }
+}
+
+/**
+  ----------------------------------------------------------------------
+*/
+
+.wrapper {
   border-radius: 4px;
-  padding-top: 13px;
-  padding-bottom: 24px;
-  padding-left: 9px;
-  padding-right: 9px;
+  padding: 13px 9px 24px;
+
   position: relative;
   @media screen and (min-width: $tablet) {
-    padding-top: 20px;
+    padding: 20px 0 24px 23px;
+  }
+  @media screen and (min-width: $laptop) {
+    background-color: $form-background-color;
+    padding: 24px 98px 24px 175px;
+  }
+  @media screen and (min-width: $desktop) {
+    background-color: $form-background-color;
+    padding-left: 351px;
+    padding-right: 311px;
   }
 }
 
@@ -32,22 +49,34 @@ input[type='number']:focus {
 
   @media screen and (min-width: $tablet) {
     margin-bottom: 24px;
+    text-align: right;
     font-size: 24px;
     line-height: 1.33;
     letter-spacing: 15px;
   }
+  @media screen and (min-width: $laptop) {
+    text-align: left;
+    letter-spacing: 29px;
+  }
 }
-
+.box {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 .form-box {
   @media screen and (min-width: $tablet) {
     display: flex;
+    flex-direction: column;
+    width: 411px;
   }
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 .form-label {
@@ -118,15 +147,17 @@ input[type='number']:focus {
   display: none;
   @media screen and (min-width: $tablet) {
     display: block;
-    margin-left: 11px;
-    margin-top: 32px;
   }
 }
 .form-picture {
   display: block;
   @media screen and (min-width: $tablet) {
-    width: 258px;
-    height: 210px;
+    width: 222px;
+    height: 167px;
+  }
+  @media screen and (min-width: $laptop) {
+    width: 422px;
+    height: 316px;
   }
 }
 .img {
@@ -158,6 +189,15 @@ input[type='number']:focus {
   width: 348px;
   height: 407px;
   transform: translate(-50%, -50%);
+
+  @media screen and (min-width: $tablet) {
+    width: 703px;
+    height: 404px;
+  }
+  @media screen and (min-width: $laptop) {
+    width: 1116px;
+    height: 397px;
+  }
 }
 
 .modal-wrapper {
@@ -192,6 +232,17 @@ input[type='number']:focus {
 
 .form-icon-close {
   cursor: pointer;
+}
+
+.form-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.icon-error {
+  fill: #e2574c;
 }
 
 .spiner {
