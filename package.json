@@ -13,6 +13,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "posthtml-doctype": "^1.1.1",
-    "swiper": "^9.2.4"
+    "swiper": "^9.2.4",
+    "validator": "^13.9.0"
   }
 }
