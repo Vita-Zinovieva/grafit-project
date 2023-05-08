@@ -9,6 +9,7 @@
   }
   @media screen and (min-width: $laptop) {
     max-width: calc(1280px + 160px);
+    padding: 0 80px;
   }
   @media screen and (min-width: $desktop) {
     max-width: calc(1758px + 162px);
