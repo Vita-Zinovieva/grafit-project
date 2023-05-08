@@ -1,17 +1,18 @@
 .container {
   margin: 0px auto;
-  max-width: calc(358px + 32px);
+  width: calc(358px + 32px);
   padding: 0 16px;
 
   @media screen and (min-width: $tablet) {
-    width: calc(704px + 64px);
+    max-width: calc(704px + 64px);
     padding: 0 32px;
   }
   @media screen and (min-width: $laptop) {
-    width: calc(1280px + 160px);
+    max-width: calc(1280px + 160px);
+    padding: 0 80px;
   }
   @media screen and (min-width: $desktop) {
-    width: calc(1758px + 162px);
+    max-width: calc(1758px + 162px);
     padding: 0 81px;
   }
 }
