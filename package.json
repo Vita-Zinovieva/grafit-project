@@ -1,19 +1,18 @@
 {
-    "name": "my-project",
-    "source": "src/index.html",
-    "scripts": {
-        "start": "parcel",
-        "build": "parcel build"
-    },
-    "devDependencies": {
-        "@parcel/transformer-sass": "^2.8.3",
-        "parcel": "latest",
-        "posthtml-include": "^1.7.4"
-    },
-    "dependencies": {
-        "@emailjs/browser": "^3.11.0",
-        "imask": "^6.6.1",
-        "posthtml-doctype": "^1.1.1",
-        "swiper": "^9.2.4"
-    }
+  "name": "my-project",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "parcel": "latest",
+    "posthtml-include": "^1.7.4"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "posthtml-doctype": "^1.1.1",
+    "swiper": "^9.2.4"
+  }
 }
