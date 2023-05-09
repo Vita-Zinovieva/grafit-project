@@ -1,32 +1,103 @@
 .header {
-  max-width: 1920px;
   background-color: $current-color;
 }
 
-.logo {
-  display: block;
-  margin-right: 184px;
-}
-
-.logo_img {
-  background-color: green;
-}
-
 .header_container {
-  display: flex;
-  align-items: center;
-  padding-top: 75px;
+  padding-top: 92px;
+
+  @media screen and (min-width: $tablet) and (max-width: $tabletMax) {
+    padding-top: 132px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    display: flex;
+    align-items: center;
+    padding-top: 55px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 75px;
+  }
 }
 
-.nav__list {
-  display: flex;
-  gap: 144px;
-  align-items: center;
-  margin-right: 144px;
+.logo {
+  @media screen and (max-width: $tabletMax) {
+    display: none;
+  }
+
+  @media screen and (min-width: $laptop) and (max-width: $laptopMax) {
+    margin-right: 95px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 140px;
+    margin-right: 144px;
+  }
+}
+
+.logo .logo_img {
+  width: 122px;
+  height: 59px;
+}
+
+.nav {
+  @media screen and (max-width: $tabletMax) {
+    display: none;
+  }
+}
+
+.nav_list {
+  @media screen and (min-width: $laptop) {
+    display: flex;
+    gap: 104px;
+    align-items: center;
+    margin-right: 104px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 144px;
+    align-items: center;
+    margin-right: 144px;
+  }
+}
+
+.nav__link {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: $primary-text-color;
 }
 
 .tel_link {
+  @media screen and (max-width: $tabletMax) {
+    display: none;
+  }
+
+  font-weight: 300;
+}
+
+.menu-toggle {
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
+  justify-content: center;
+  margin-left: auto;
+
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  @media screen and (max-width: $mobileMax) {
+    padding-right: 59px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $tabletMax) {
+    padding-right: 56px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    display: none;
+  }
 }

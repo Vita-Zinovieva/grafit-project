@@ -1,0 +1,77 @@
+.menu-container {
+  z-index: 100;
+  width: 390px;
+  height: auto;
+  overflow: auto;
+  background-color: $current-color;
+
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 100%;
+    background-image: url('../images/tablet-bgc.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.btn-close .menu-toggle__icon {
+  position: absolute;
+  top: 92px;
+  right: 89px;
+
+  @media screen and (min-width: $tablet) {
+    top: 130px;
+    right: 131px;
+  }
+}
+
+.mobile-menu {
+  margin: 212px auto 103px;
+
+  @media screen and (min-width: $tablet) {
+    margin: 212px auto 289px;
+  }
+}
+
+.mobile-menu-item:not(:last-child) {
+  margin-bottom: 58px;
+}
+
+.mobile-menu-link {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: $primary-text-color;
+  text-align: center;
+}
+
+.modal_tel_link {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: $primary-text-color;
+
+  margin-bottom: 126px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 72px;
+  }
+}
