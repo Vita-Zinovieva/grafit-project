@@ -2,6 +2,7 @@
 // import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import emailjs from '@emailjs/browser';
 import validator from 'validator';
+import formatDate from './formatDate';
 
 /**
   variables----------------------------------------------------------------------
@@ -14,7 +15,8 @@ const resolve = document.querySelector('[data-resolve]');
 const errorText = document.querySelector('[data-error]');
 const closeBtn = document.querySelector('[data-modal-close]');
 const emailInput = document.getElementById('email');
-const errorMessage = document.querySelector('[data-error]');
+const modalWrapper = document.querySelector('.modal-wrapper');
+const validMessage = document.querySelector('.form-error-message');
 
 /**
   SHOW/HIDDEN MODAL----------------------------------------------------------------------
@@ -66,48 +68,39 @@ function getAllvalues(e) {
   const isValidEmail = validator.isEmail(email.value);
   if (!isValidEmail) {
     emailLable.style.borderBottomColor = '#ed1332';
-    const errorMessage =
-      '<p class="form-error-message">Помилка невалідний Email</p>';
-    emailLable.insertAdjacentHTML('afterend', errorMessage);
+    validMessage.innerHTML = 'Помилка невалідний Email';
   } else {
-    //Change date format
-    const dateValue = new Date(date.value);
-    const formattedDate = `${(dateValue.getMonth() + 1)
-      .toString()
-      .padStart(2, '0')}-${dateValue
-      .getDate()
-      .toString()
-      .padStart(2, '0')}-${dateValue.getFullYear()}`;
-
-    //Make an object to send email
-    const formObj = {
-      name: name.value,
-      phone: phone.value,
-      training: training.value,
-      date: formattedDate,
-      email: email.value,
-    };
+    //Format date
+    validMessage.innerHTML = '';
+    const formObj = formatDate(name, phone, training, date, email);
 
     form.reset();
     emailLable.style.borderBottomColor = '#e2e001';
-    // errorMessage.classList.add('is-hidden');
     modal.classList.remove('is-hidden');
     spiner.classList.remove('is-hidden');
 
     //send email
     emailjs
-      .send('service_fje974l', 'template_ibkoj24', formObj, 'xmlBchw7yqEYG683_')
+      .send(
+        'service_fje974lд',
+        'template_ibkoj24',
+        formObj,
+        'xmlBchw7yqEYG683_'
+      )
       .then(
         function () {
           spiner.classList.add('is-hidden');
           closeBtn.classList.remove('is-hidden');
+          modalWrapper.classList.remove('is-hidden');
           resolve.classList.remove('is-hidden');
           console.log('Success');
         },
         function (error) {
           spiner.classList.add('is-hidden');
           closeBtn.classList.remove('is-hidden');
+          modalWrapper.classList.remove('is-hidden');
           errorText.classList.remove('is-hidden');
+
           console.log('Error');
         }
       );
