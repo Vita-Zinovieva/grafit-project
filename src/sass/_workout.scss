@@ -1,0 +1,34 @@
+.workout_section {
+  padding-top: 64px;
+}
+
+.workout-title {
+  font-family: 'Mabry Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 5px;
+  color: $primary-text-color;
+
+  margin-bottom: 48px;
+}
+
+.funbarr-img {
+  width: 234px;
+  height: 243px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  background-image: url('../images/workout/photo1-360@1x.png');
+  background-size: cover;
+  margin-bottom: 100px;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/workout/photo1-360@2x.png');
+  }
+}

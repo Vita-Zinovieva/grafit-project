@@ -1,39 +1,87 @@
 .hero {
-  max-width: 1920px;
   background-color: $current-color;
-  padding-bottom: 262px;
 }
 
 .hero_title {
-  font-family: "Mabry Pro";
+  font-family: 'Mabry Pro';
   font-style: normal;
   font-weight: 900;
-  font-size: 140px;
-  line-height: 140px;
-  letter-spacing: 120px;
+  font-size: 40px;
+  line-height: 120px;
 
   text-align: center;
-  padding-top: 162px;
-  margin-bottom: 24px;
+  letter-spacing: 40px;
+
+  color: $primary-text-color;
+
+  padding-top: 68px;
+  margin-bottom: 52px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 96px;
+    letter-spacing: 58px;
+
+    padding-top: 172px;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-bottom: 43px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    padding-top: 208px;
+    margin-bottom: 28px;
+    padding-left: 65px;
+    padding-right: 65px;
+
+    font-size: 140px;
+    line-height: 140px;
+    letter-spacing: 120px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 162px;
+    margin-bottom: 24px;
+    padding-left: 297px;
+    padding-right: 297px;
+
+    font-size: 140px;
+    line-height: 140px;
+    letter-spacing: 120px;
+  }
 }
 
 .hero_text {
-  width: 274px;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  margin-bottom: 64px;
-  letter-spacing: 29px;
-  font-family: "Mabry Pro";
+  font-family: 'Mabry Pro';
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 32px;
+
+  text-align: center;
+  letter-spacing: 5px;
+
+  color: $primary-text-color;
+  margin-bottom: 52px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+    letter-spacing: 29px;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    margin-bottom: 43px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 64px;
+  }
 }
 
 .hero_btn {
   display: block;
-  width: 274px;
+  width: 173px;
+  height: 57px;
   border-radius: 2px;
   background-color: $primary-text-color;
   color: $current-color;
@@ -42,4 +90,32 @@
   margin-right: auto;
 
   cursor: pointer;
+
+  margin-bottom: 188px;
+
+  @media screen and (min-width: $tablet) {
+    width: 194px;
+    margin-bottom: 347px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    margin-bottom: 187px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 274px;
+    height: 64px;
+
+    margin-bottom: 262px;
+  }
+}
+
+.logo_link {
+  padding-left: 118px;
+  padding-right: 118px;
+  padding-bottom: 150px;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 }
