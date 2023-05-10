@@ -1,0 +1,164 @@
+// $mobileMax: 767.98px;
+// $tablet: 768px;
+// $tabletMax: 1439.98px;
+// $laptop: 1440px;
+// $laptopMax: 1919.98px;
+// $desktop: 1920px;
+
+// $current-color: #e2e001;
+// $primary-text-color: #24282b;
+// $footer-text-color: #f7f7f6;
+// $background-color: #f5f5f5;
+// $footer-background-color: #24282b;
+// $form-background-color: #eeeeed;
+// $icon-disable:#c7c9c6;
+// $time: 250ms;
+
+.schedule {
+  margin: 64px 0;
+}
+
+.schedule .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.schedule-title {
+  font-family: 'MabryPro';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(32 / 20);
+  letter-spacing: 5px;
+
+  color: $primary-text-color;
+
+  margin-bottom: 48px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+    letter-spacing: 15px;
+
+    margin-bottom: 56px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    letter-spacing: 29px;
+
+    margin-bottom: 80px;
+  }
+}
+
+.schedule-list {
+  padding-left: 31px;
+
+  @media screen and (min-width: $tablet) {
+    padding-left: calc(96px - 32px);
+    align-self: baseline;
+    justify-self: baseline;
+  }
+
+  @media screen and (min-width: $laptop) {
+    display: flex;
+  }
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 8px;
+
+  @media screen and (min-width: $laptop) {
+    display: block;
+    margin-bottom: 0px;
+    margin-right: 24px;
+  }
+}
+
+.svg-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 56px;
+
+  stroke-width: 1px;
+  stroke: $primary-text-color;
+
+  &:hover,
+  &:focus {
+    stroke: $current-color;
+    color: $current-color;
+  }
+
+  @media screen and (min-width: $laptop) {
+    stroke-width: 3px;
+
+    margin-right: 0px;
+    margin-bottom: 12px;
+  }
+}
+
+.schedule-svg {
+  width: 100px;
+  height: 100px;
+
+  @media screen and (min-width: $laptop) {
+    width: 175px;
+    height: 185px;
+  }
+}
+
+.schedule-svg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: 'NotoSerifTC';
+  font-size: 16px;
+  line-height: 2;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $laptop) {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+  }
+}
+
+.schedule-list-item:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.schedule-item-text {
+  display: flex;
+
+  font-family: 'NotoSerifTC';
+  font-size: 16px;
+  line-height: 2;
+
+  color: $primary-text-color;
+
+  & span {
+    display: block;
+  }
+}
+
+.schedule-time {
+  margin-right: 8px;
+
+  @media screen and (min-width: $laptop) {
+    margin-right: 33px;
+  }
+}
