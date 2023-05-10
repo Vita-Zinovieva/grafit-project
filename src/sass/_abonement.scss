@@ -1,0 +1,270 @@
+.abonement-container {
+  margin-top: 64px;
+  margin-bottom: 64px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    @media screen and (min-width: $laptop){
+      margin: 120px 0 120px 0;
+  
+  }
+}
+
+.abonement_title {
+  font-family: 'MabryPro';
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(32 / 20);
+  letter-spacing: 5px;
+  color: $primary-text-color;
+  text-align: center;
+  margin-bottom: 48px;
+  
+  @media screen and (min-width: $tablet){
+    margin-bottom: 56px;
+  }
+
+  @media screen and (min-width: $laptop){
+    font-size: 24px;
+    line-height: calc(32 / 24);
+    margin-bottom: 80px;
+  }
+ }
+
+
+.abonevent_variant {
+  width: 358px;
+  height: 112px;
+  margin-bottom: 12px;
+  background-color: $form-background-color;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    @media screen and (min-width: $tablet){
+      width: 344px;
+      height: 172px;
+      margin-bottom: 0px;
+    }
+    @media screen and (min-width: $laptop){
+      width: 411px;
+      height: 201px;
+      margin-bottom: 0px;
+    }
+    @media screen and (min-width: $desktop){
+      width: 570px;
+      height: 204px;
+      margin-bottom: 0px;
+    }
+}
+
+.abonement_grid{
+  @media screen and (min-width: $tablet) {
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 12px;
+    grid-column-gap: 16px;
+    width: 704px;
+    height: 575px;
+  }
+  @media screen and (min-width: $laptop) {
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 24px;
+    width: 1281px;
+    height: 432px;
+  }
+  @media screen and (min-width: $desktop){
+    width: 1758px;
+  }
+}
+
+.abonement_card {
+  width: 171px;
+  height: 112px;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+ // bottom: 10;
+  background-size: cover;
+    @media screen and (min-width: $tablet){
+      width: 164px;
+      height: 172px;}
+    @media screen and (min-width: $laptop){
+      width: 193px;
+      height: 204px;
+    }
+    @media screen and (min-width: $desktop){
+      width: 271px;
+     
+    }
+}
+
+.abonement-icon{
+  width: 100%;
+  height: 100%; 
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  
+}
+.abonement_info {
+  font-family: 'NotoSerifTC';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  color: $primary-text-color;
+  position: absolute;
+  margin: 24px 2px 24px 0;
+  z-index: 3;
+  padding-left: 20px;
+  top: 0;
+  left: 0;
+  text-align: center;
+  
+  @media screen and (min-width: $tablet){
+    margin: 54px 55px 54px 0;
+  }
+  @media screen and (min-width: $laptop){
+    margin: 70px 84px 70px 0;
+    width: 109px;
+    height: 64px;
+  }
+  @media screen and (min-width: $desktop){
+    margin: 70px 162px 70px 0;
+    width: 109px;
+    height: 64px;
+    font-size: 20px;
+  }
+
+}
+.abonement_buy {
+  margin-left: 16px;
+  width: 171px;
+  @media screen and (min-width: $tablet){
+    margin-left: 181px;
+  }
+  @media screen and (min-width: $laptop){
+    width: 193px;
+    margin-left: 218px;
+  }
+  @media screen and (min-width: $desktop){
+    width: 299px;
+    margin-left: 296px;
+  }
+}
+.abonement_price {
+  font-family: 'MabryPro';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  color: $primary-text-color;
+  
+  position: absolute;
+  width: 164px;
+  left: 187px;
+  top: 24px;
+  display: flex;
+  justify-content: center;
+    @media screen and (min-width: $tablet){
+      left: 180px;
+      top: 52px;
+    }
+    @media screen and (min-width: $laptop){
+      width: 145px;
+      height: 32px;
+      left: 218px;
+      top: 69px;
+    }
+    @media screen and (min-width: $desktop){
+      font-size: 24px;
+      line-height: 1.3;
+      width: 145px;
+      height: 32px;
+      left: 296px;
+      
+    }
+
+}
+.abonement_btn {
+  font-family: 'NotoSerifTC';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  color: $primary-text-color;
+  background-color: $current-color;
+    &:hover{
+      border: 1px solid $icon-disable;
+      background-color: $footer-text-color;
+    }
+  
+  border-radius: 2px;
+  position: absolute;
+  width: 171px;
+  height: 36px;
+  right: 0px;
+  bottom: 9px;
+  text-align: center;
+   
+    @media screen and (min-width: $tablet){
+      width: 164px;
+      bottom: 30px;
+    }
+    @media screen and (min-width: $laptop){
+      width: 145px;
+      margin: 125px 48px 35px 218px;
+      bottom: 0px;
+      
+    }
+    @media screen and (min-width: $desktop){
+      height: 44px;
+      margin: 125px 129px 35px 296px;
+      bottom: 0px;
+      
+    }
+ 
+}
+.abonement_day {
+  font-family: 'NotoSerif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.4px;
+  display: flex;
+  align-items: center;
+  color: $footer-background-color;
+  
+  position: absolute;
+  width: 95px;
+  height: 24px;
+  left: 20px;
+  top: 55px;
+  @media screen and (min-width: $tablet){
+    left: 249px;
+    top: 4px;
+  }
+  @media screen and (min-width: $laptop){
+    line-height: 2.4px;
+    width: 109px;
+    left: 302px;
+    top: 8px;
+  }
+  @media screen and (min-width: $desktop){
+    line-height: 2.4px;
+    width: 95px;
+    left: 467px;
+    top: 8px;
+  }
+
+}
