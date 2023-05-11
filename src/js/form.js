@@ -14,6 +14,7 @@ const errorText = document.querySelector('[data-error]');
 const closeBtn = document.querySelector('[data-modal-close]');
 const emailInput = document.getElementById('email');
 const validMessage = document.querySelector('.form-error-message');
+const trainingBtn = document.querySelector('[data-training]');
 
 /**
   SHOW/HIDDEN MODAL----------------------------------------------------------------------
@@ -99,4 +100,16 @@ function getAllvalues(e) {
         }
       );
   }
+}
+
+/**
+  Scroll----------------------------------------------------------------------
+*/
+
+trainingBtn.addEventListener('click', handleScroll);
+
+function handleScroll(e) {
+  e.preventDefault();
+  const formSection = document.querySelector('.send-form');
+  formSection.scrollIntoView({ behavior: 'smooth' });
 }
