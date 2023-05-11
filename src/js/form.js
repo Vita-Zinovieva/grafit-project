@@ -65,7 +65,7 @@ function getAllvalues(e) {
   const isValidEmail = validator.isEmail(email.value);
   if (!isValidEmail) {
     emailLable.style.borderBottomColor = '#ed1332';
-    validMessage.innerHTML = 'Помилка невалідний Email';
+    validMessage.innerHTML = 'невалідний Email';
   } else {
     //Format date
     validMessage.innerHTML = '';
