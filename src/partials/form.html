@@ -84,17 +84,21 @@
 
       <!-- Modal window -->
       <div class="backdrop is-hidden" data-modal>
-        <div class="modal-wrapper is-hidden">
-          <button class="icon-wrapper" data-modal-close>
+        <div class="modal-wrapper">
+          <button class="icon-wrapper is-hidden" data-modal-close>
             <svg class="form-icon-close" width="24" height="24">
               <use href="./images/icons/sprite.svg#icon-close"></use>
             </svg>
           </button>
           <!-- Show if fulfilled -->
-          <p class="from-modal-text" data-resolve>Дякуємо за замовлення!</p>
-          <p class="from-modal-text">Ми зв’яжемось з вами найближчим часом.</p>
+          <div class="form-message is-hidden" data-resolve>
+            <p class="from-modal-text" data-resolve>Дякуємо за замовлення!</p>
+            <p class="from-modal-text">
+              Ми зв’яжемось з вами найближчим часом.
+            </p>
+          </div>
           <!-- Show if rejected -->
-          <div class="form-error is-hidden" data-error>
+          <div class="form-message is-hidden" data-error>
             <div>
               <svg class="icon-error" width="32" height="32">
                 <use href="./images/icons/sprite.svg#icon-error"></use>
@@ -105,12 +109,20 @@
               Зателефонуйте нам або спробуйте пізніше.
             </p>
           </div>
-        </div>
-      </div>
-      <!-- Show Spiner -->
-      <div class="spiner is-hidden" data-spiner>
-        <div class="spinner-border text-warning" role="status">
-          <span class="visually-hidden">Loading...</span>
+          <!-- Show Spiner -->
+          <div class="preloader is-hidden" data-spiner>
+            <svg
+              class="preloader__image"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="currentColor"
+                d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"
+              ></path>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
