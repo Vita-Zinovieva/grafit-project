@@ -1,5 +1,3 @@
-// import "bootstrap/dist/css/bootstrap.min.css";
-// import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import emailjs from '@emailjs/browser';
 import validator from 'validator';
 import formatDate from './formatDate';
@@ -15,7 +13,6 @@ const resolve = document.querySelector('[data-resolve]');
 const errorText = document.querySelector('[data-error]');
 const closeBtn = document.querySelector('[data-modal-close]');
 const emailInput = document.getElementById('email');
-const modalWrapper = document.querySelector('.modal-wrapper');
 const validMessage = document.querySelector('.form-error-message');
 
 /**
@@ -73,7 +70,6 @@ function getAllvalues(e) {
     //Format date
     validMessage.innerHTML = '';
     const formObj = formatDate(name, phone, training, date, email);
-    console.log('formObj--->', formObj);
 
     form.reset();
     emailLable.style.borderBottomColor = '#e2e001';
@@ -82,21 +78,23 @@ function getAllvalues(e) {
 
     // send email
     emailjs
-      .send('service_i0hyi9f', 'template_lxiirpx', formObj, 'T3jPomcN80veILDDH')
+      .send(
+        'service_i0hyi9fд',
+        'template_lxiirpx',
+        formObj,
+        'T3jPomcN80veILDDH'
+      )
       .then(
         function () {
           spiner.classList.add('is-hidden');
           closeBtn.classList.remove('is-hidden');
-          modalWrapper.classList.remove('is-hidden');
           resolve.classList.remove('is-hidden');
           console.log('Success');
         },
         function (error) {
           spiner.classList.add('is-hidden');
           closeBtn.classList.remove('is-hidden');
-          modalWrapper.classList.remove('is-hidden');
           errorText.classList.remove('is-hidden');
-
           console.log('Error');
         }
       );

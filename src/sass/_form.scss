@@ -232,7 +232,7 @@ input[type='number']:focus {
   cursor: pointer;
 }
 
-.form-error {
+.form-message {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -243,9 +243,27 @@ input[type='number']:focus {
   fill: #e2574c;
 }
 
-.spiner {
+/**
+  Spiner----------------------------------------------------------------------
+*/
+
+.preloader {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  // z-index: 1001;
+}
+
+.preloader__image {
+  color: $current-color;
+  width: 70px;
+  height: 70px;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
