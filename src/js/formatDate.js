@@ -1,10 +1,9 @@
 const formatDate = (name, phone, training, date, email) => {
   //Change date format
   const dateValue = new Date(date.value);
-  const formattedDate = `${(dateValue.getMonth() + 1)
-    .toString()
-    .padStart(2, '0')}-${dateValue
-    .getDate()
+  const formattedDate = `${dateValue.getDate().toString().padStart(2, '0')}-${(
+    dateValue.getMonth() + 1
+  )
     .toString()
     .padStart(2, '0')}-${dateValue.getFullYear()}`;
 
