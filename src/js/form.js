@@ -81,12 +81,7 @@ function getAllvalues(e) {
 
     //send email
     emailjs
-      .send(
-        'service_fje974lд',
-        'template_ibkoj24',
-        formObj,
-        'xmlBchw7yqEYG683_'
-      )
+      .send('service_fje974l', 'template_ibkoj24', formObj, 'xmlBchw7yqEYG683_')
       .then(
         function () {
           spiner.classList.add('is-hidden');
@@ -110,7 +105,3 @@ function getAllvalues(e) {
 /**
   Validation----------------------------------------------------------------------
 */
-
-console.log(emailInput);
-
-validator.isEmail();
