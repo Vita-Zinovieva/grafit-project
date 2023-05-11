@@ -73,15 +73,16 @@ function getAllvalues(e) {
     //Format date
     validMessage.innerHTML = '';
     const formObj = formatDate(name, phone, training, date, email);
+    console.log('formObj--->', formObj);
 
     form.reset();
     emailLable.style.borderBottomColor = '#e2e001';
     modal.classList.remove('is-hidden');
     spiner.classList.remove('is-hidden');
 
-    //send email
+    // send email
     emailjs
-      .send('service_fje974l', 'template_ibkoj24', formObj, 'xmlBchw7yqEYG683_')
+      .send('service_i0hyi9f', 'template_lxiirpx', formObj, 'T3jPomcN80veILDDH')
       .then(
         function () {
           spiner.classList.add('is-hidden');
@@ -101,7 +102,3 @@ function getAllvalues(e) {
       );
   }
 }
-
-/**
-  Validation----------------------------------------------------------------------
-*/
