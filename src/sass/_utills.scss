@@ -22,3 +22,7 @@ $footer-background-color: #24282b;
 $form-background-color: #eeeeed;
 $icon-disable: #c7c9c6;
 $time: 250ms;
+
+html {
+  scroll-behavior: smooth;
+}
