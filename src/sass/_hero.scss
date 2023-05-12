@@ -3,18 +3,20 @@
 }
 
 .hero_title {
-  font-family: 'Mabry Pro';
+  font-family: 'MabryPro';
   font-style: normal;
   font-weight: 900;
   font-size: 40px;
   line-height: 120px;
 
   text-align: center;
-  letter-spacing: 40px;
+  letter-spacing: 32px;
 
   color: $primary-text-color;
 
   padding-top: 68px;
+  padding-left: 18px;
+  padding-right: 18px;
   margin-bottom: 52px;
 
   @media screen and (min-width: $tablet) {
@@ -51,7 +53,7 @@
 }
 
 .hero_text {
-  font-family: 'Mabry Pro';
+  font-family: 'MabryPro';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -79,6 +81,7 @@
 }
 
 .hero_btn {
+  font-family: 'NotoSerifTC';
   display: block;
   width: 173px;
   height: 57px;
@@ -110,6 +113,14 @@
   }
 }
 
+.hero_btn:hover,
+.hero_btn:focus,
+.hero_btn:active {
+  border: 1px solid $primary-text-color;
+  color: $primary-text-color;
+  background-color: #fff;
+}
+
 .logo_link {
   padding-left: 118px;
   padding-right: 118px;
@@ -118,4 +129,8 @@
   @media screen and (min-width: $tablet) {
     display: none;
   }
+}
+.logo_mob {
+  width: 101.08px;
+  height: 28.2px;
 }
