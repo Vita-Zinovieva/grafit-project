@@ -1,9 +1,17 @@
 .workout_section {
   padding-top: 64px;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 94px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    padding-top: 120px;
+  }
 }
 
 .workout-title {
-  font-family: 'Mabry Pro';
+  font-family: 'MabryPro';
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -13,6 +21,134 @@
   color: $primary-text-color;
 
   margin-bottom: 48px;
+
+  @media screen and (min-width: $tablet) and (max-width: $tabletMax) {
+    font-size: 24px;
+    letter-spacing: 15px;
+    margin-bottom: 58px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    font-size: 24px;
+    letter-spacing: 29px;
+    margin-bottom: 207px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 168px;
+  }
+}
+
+.workout-list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.workout-item {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: flex-end;
+    height: max-content;
+    gap: 36px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    position: relative;
+    gap: 24px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 148px;
+  }
+}
+
+.workout-item:nth-child(2n) {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.text_wrapper {
+  @media screen and (min-width: $tablet) and (max-width: $tabletMax) {
+    width: 344px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    width: 519px;
+  }
+}
+
+.text_wrapper.left-side {
+  @media screen and (min-width: $laptop) and (max-width: $laptopMax) {
+    margin-right: 218px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 349px;
+  }
+}
+
+.text_wrapper.right-side {
+  @media screen and (min-width: $laptop) and (max-width: $laptopMax) {
+    margin-left: 218px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 365px;
+  }
+}
+
+.text_wrapper.funbarr {
+  @media screen and (min-width: $laptop) and (max-width: $laptopMax) {
+    margin-bottom: 188px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 227px;
+  }
+}
+
+.text_wrapper.functional {
+  @media screen and (min-width: $laptop) and (max-width: $laptopMax) {
+    margin-bottom: 163px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 138px;
+  }
+}
+
+.text_wrapper.hotspot {
+  @media screen and (min-width: $laptop) and (max-width: $laptopMax) {
+    margin-bottom: 203px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 228px;
+  }
+}
+
+.text_wrapper.stretching {
+  @media screen and (min-width: $laptop) and (max-width: $laptopMax) {
+    margin-bottom: 164px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 139px;
+  }
+}
+
+.text_wrapper.hotstretching {
+  @media screen and (min-width: $laptop) and (max-width: $laptopMax) {
+    margin-bottom: 268px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 298px;
+  }
 }
 
 .funbarr-img {
@@ -23,12 +159,380 @@
   margin-bottom: 24px;
   background-image: url('../images/workout/photo1-360@1x.png');
   background-size: cover;
-  margin-bottom: 100px;
 
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: url('../images/workout/photo1-360@2x.png');
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $tabletMax) {
+    width: 234px;
+    height: 243px;
+    margin: 0;
+    background-image: url('../images/workout/photo1-768@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo1-768@2x.png');
+    }
+  }
+
+  @media screen and (min-width: $laptop) and (max-width: $laptopMax) {
+    position: absolute;
+    top: -120px;
+    left: 60px;
+
+    width: 436px;
+    height: 459px;
+    margin: 0;
+    background-image: url('../images/workout/photo1-1440@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo1-1440@2x.png');
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    top: -150px;
+    left: 280px;
+
+    width: 436px;
+    height: 459px;
+    margin: 0;
+    background-image: url('../images/workout/photo1-1920@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo1-1920@2x.png');
+    }
+  }
+}
+
+.functional-img {
+  width: 234px;
+  height: 243px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  background-image: url('../images/workout/photo2-360@1x.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/workout/photo2-360@2x.png');
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $tabletMax) {
+    margin: 0;
+    background-image: url('../images/workout/photo2-768@1x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo2-768@2x.png');
+    }
+  }
+
+  @media screen and (min-width: $laptop) and (max-width: $laptopMax) {
+    position: absolute;
+    top: -135px;
+    right: 90px;
+
+    width: 435px;
+    height: 443px;
+    margin: 0;
+    background-image: url('../images/workout/photo2-1440@1x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo2-1440@2x.png');
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    top: -185px;
+    right: 300px;
+
+    width: 435px;
+    height: 443px;
+    margin: 0;
+    background-image: url('../images/workout/photo2-1920@1x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo2-1920@2x.png');
+    }
+  }
+}
+
+.hotspot-img {
+  width: 255px;
+  height: 258px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  background-image: url('../images/workout/photo3-360@1x.png');
+  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/workout/photo3-360@2x.png');
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $tabletMax) {
+    width: 250px;
+    height: 245px;
+    margin: 0;
+    background-image: url('../images/workout/photo3-768@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo3-768@2x.png');
+    }
+  }
+
+  @media screen and (min-width: $laptop) and (max-width: $laptopMax) {
+    position: absolute;
+    top: -120px;
+    left: 60px;
+
+    width: 436px;
+    height: 426px;
+    margin: 0;
+    background-image: url('../images/workout/photo3-1440@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo3-1440@2x.png');
+    }
+  }
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    top: -150px;
+    left: 280px;
+
+    width: 436px;
+    height: 426px;
+    margin: 0;
+    background-image: url('../images/workout/photo3-1920@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo3-1920@2x.png');
+    }
+  }
+}
+
+.stretching-img {
+  width: 240px;
+  height: 246px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  background-image: url('../images/workout/photo4-360@1x.png');
+  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/workout/photo4-360@2x.png');
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $tabletMax) {
+    width: 240px;
+    height: 226px;
+    margin: 0;
+    background-image: url('../images/workout/photo4-768@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo4-768@2x.png');
+    }
+  }
+
+  @media screen and (min-width: $laptop) and (max-width: $laptopMax) {
+    position: absolute;
+    top: -135px;
+    right: 90px;
+
+    width: 435px;
+    height: 427px;
+    margin: 0;
+    background-image: url('../images/workout/photo4-1440@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo4-1440@2x.png');
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    top: -185px;
+    right: 300px;
+
+    width: 435px;
+    height: 427px;
+    margin: 0;
+    background-image: url('../images/workout/photo4-1920@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo4-1920@2x.png');
+    }
+  }
+}
+
+.hotstretching-img {
+  width: 241px;
+  height: 243px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 24px;
+  background-image: url('../images/workout/photo5-360@1x.png');
+  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/workout/photo5-360@2x.png');
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $tabletMax) {
+    width: 235px;
+    height: 214px;
+    margin: 0;
+    background-image: url('../images/workout/photo5-768@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo5-768@2x.png');
+    }
+  }
+
+  @media screen and (min-width: $laptop) and (max-width: $laptopMax) {
+    position: absolute;
+    top: -120px;
+    left: 60px;
+
+    width: 434px;
+    height: 424px;
+    margin: 0;
+    background-image: url('../images/workout/photo5-1440@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo5-1440@2x.png');
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: absolute;
+    top: -150px;
+    left: 280px;
+
+    width: 434px;
+    height: 424px;
+    margin: 0;
+    background-image: url('../images/workout/photo5-1920@1x.png');
+
+    @media (min-device-pixel-ratio: 2),
+      (-webkit-min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/workout/photo5-1920@2x.png');
+    }
+  }
+}
+
+.workout-subtitle {
+  font-family: 'MabryPro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 1.5px;
+  color: $primary-text-color;
+
+  margin-bottom: 24px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: $laptop) {
+    margin-bottom: 36px;
+  }
+}
+
+.workout-text {
+  font-family: 'NotoSerifTC';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  color: $primary-text-color;
+
+  @media screen and (min-width: $tablet) {
+    line-height: 32px;
+  }
+}
+
+.workout-item:not(:last-child) {
+  margin-bottom: 36px;
+}
+
+.workout-item:last-child {
+  @media screen and (max-width: $mobileMax) {
+    margin-bottom: 56px;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $tabletMax) {
+    margin-bottom: 91px;
   }
 }
