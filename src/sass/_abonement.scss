@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
     @media screen and (min-width: $laptop){
-      margin: 120px 0 120px 0;
+     // margin: 120px 0 120px 0;
   
   }
 }
@@ -19,16 +19,22 @@
   letter-spacing: 5px;
   color: $primary-text-color;
   text-align: center;
-  margin-bottom: 48px;
+ // margin-bottom: 48px;
+  padding-bottom: 48px;
+  letter-spacing: 5px;
   
   @media screen and (min-width: $tablet){
-    margin-bottom: 56px;
+    //margin-bottom: 56px;
+    padding-bottom: 56px;
+    letter-spacing: 15px;
   }
 
   @media screen and (min-width: $laptop){
     font-size: 24px;
     line-height: calc(32 / 24);
-    margin-bottom: 80px;
+    //margin-bottom: 80px;
+    padding-bottom: 80px;
+    letter-spacing: 29px;
   }
  }
 

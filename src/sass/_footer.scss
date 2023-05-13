@@ -4,75 +4,128 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  width: 100%;
 }
 
 .footer-container {
   display: flex;
   width: 390px;
-  margin: 0;
+  padding: 0;
   height: auto;
   justify-content: center;
   align-items: center;
-
-  @media screen and (min-width: 767px) {
-    width:auto;
-    height: auto;
+  padding: 27px 16px 27px 45px;
+  justify-content: flex-start;
+  
+  @media screen and (min-width: $tablet) {
+    width:768px;
+    height:100%;
+    padding: 81px 16px 91px 36px;
+    justify-content: flex-start;
+  }
+  @media screen and (min-width: $laptop) {
+    width:952px;
+    height:100%;
+    padding-top: 11px;
+    padding-bottom: 13px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    justify-content: flex-start;
+  }
+  @media screen and (min-width: $desktop) {
+    width:967px;
+    height:100%;
+    padding-top: 19px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    //margin: 0;
+    justify-content: flex-start;
+    
   }
   
 }
 
 .footer-map {
-  margin: 27px 0 27px 45px;
   width: 113px;
   height: 127px;
   cursor: pointer;
 
-  @media screen and (min-width: 767px) {
-    margin: 82px 19px 82px 36px;
+  @media screen and (min-width: $tablet) {
     width: 159px;
     height: 179px;
   }
-  @media screen and (min-width: 1440px) {
-    margin: 11px 0 11px 189px;
+  @media screen and (min-width: $laptop) {
     width: 302px;
     height: 365px;
   } 
-  
+  @media screen and (min-width: $desktop) {
+    width: 302px;
+    height: 341px;
+  } 
+    
 }
 
 .footer-contact {
   display: flex;
   flex-direction: column;
-  
-  @media screen and (min-width: 767px) {
+  padding-left: 45px;
+    
+  @media screen and (min-width: $tablet) {
     flex-direction: row;
+    padding-left: 19px;
+    width: 306px;
+    height:182px;
+    align-items: center;
   }
-  @media screen and (min-width: 1440px) {
-    display: flex;
+  @media screen and (min-width: $laptop) {
+    width: 306px;
+    height: 245px;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 346px;
+
+  }
+  @media screen and (min-width: $desktop) {
+    width: 273px;
+    height: 282px;
+    flex-direction: column;
+    padding-left: 440px;
+
   }
 
 }
 .footer-adress {
   width: 100%;
   height: 100%;
-  
-  @media screen and (min-width: 1440px) {
-    // width: 197px;
-    max-height: 182px;
+  @media screen and (min-width: $tablet){
+    width: 306px;
+  }
+    
+  @media screen and (min-width: $laptop) {
+    width: 219px;
+    height: 182px;
+  } 
+  @media screen and (min-width: $desktop) {
+    width: 273px;
+    height: 182px;
   } 
 }
+
 .footer-adress_list {
-  margin: 27px 16px 19px 44px;
+  //margin: 27px 16px 19px 44px;
+  //padding: 27px 16px 19px 44px;
   
-  @media screen and (min-width: 768px) {
-    max-width: 197px;
-    max-height: 182px;
-    margin: 81px 228px 80px 0px;
+  @media screen and (min-width: $tablet) {
+    width: 306px;
+    height: 182px;
+    padding-right: 117px;
+    
   }
-  @media screen and (min-width: 1440px) {
-    margin: 44px 406px 0px 344px;
+  @media screen and (min-width: $laptop) {
+    padding:0;
   } 
 }
 
@@ -83,9 +136,10 @@ footer {
   line-height: 1.6;
   color: $footer-text-color;
   cursor: pointer;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     font-size: 16px;
     line-height: 2;
+    padding-bottom: 16px;
   } 
 }
 
@@ -93,19 +147,29 @@ footer {
   display: flex;
   width: 102px;
   justify-content: space-between;
-  margin: 0px 88px 35px 44px;
+  padding-top: 19px;
  
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $tablet) {
+      width: 45px;
+      height: 147px;
       display: grid;
-      row-gap: 63px;      
+      row-gap: 57px;      
       padding: 0;
-      margin: 106px 96px 105px 0px;
+      
     }
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: $laptop) {
       display: flex;
-      width: 142px;
+      width: 153px;
       justify-content: space-between;
-      margin: 51px 457px 46px 350px;
+      padding-top: 56px;
+      
+    }
+    @media screen and (min-width: $laptop) {
+      display: flex;
+      width: 138px;
+      justify-content: space-between;
+      padding-top: 58px;
+      
     }
 }
 
@@ -113,7 +177,7 @@ footer {
   width: 100%;
   height: 100%;
   cursor: pointer;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     width: 45px;
     height: 45px;    
    
@@ -132,12 +196,12 @@ footer {
   height: 25px;
   fill: $current-color;
   
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     width: 45px;
     height: 45px;    
    
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: $laptop) {
     width: 45px;
     height: 45px;
     
