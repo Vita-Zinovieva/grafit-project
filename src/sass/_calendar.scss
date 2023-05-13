@@ -1,19 +1,3 @@
-// $mobileMax: 767.98px;
-// $tablet: 768px;
-// $tabletMax: 1439.98px;
-// $laptop: 1440px;
-// $laptopMax: 1919.98px;
-// $desktop: 1920px;
-
-// $current-color: #e2e001;
-// $primary-text-color: #24282b;
-// $footer-text-color: #f7f7f6;
-// $background-color: #f5f5f5;
-// $footer-background-color: #24282b;
-// $form-background-color: #eeeeed;
-// $icon-disable:#c7c9c6;
-// $time: 250ms;
-
 .schedule {
   margin: 64px 0;
 }
@@ -61,7 +45,7 @@
 .schedule-list {
   padding-left: 31px;
 
-  @media screen and (min-width: $tablet) {
+  @media screen and (min-width: $tablet) and (max-width: $tabletMax) {
     padding-left: calc(96px - 32px);
     align-self: baseline;
     justify-self: baseline;
@@ -69,6 +53,7 @@
 
   @media screen and (min-width: $laptop) {
     display: flex;
+    padding-left: 0;
   }
 }
 
@@ -81,7 +66,15 @@
   @media screen and (min-width: $laptop) {
     display: block;
     margin-bottom: 0px;
-    margin-right: 24px;
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &:not(:last-child) {
+      margin-right: 122px;
+    }
   }
 }
 
@@ -96,8 +89,11 @@
   stroke-width: 1px;
   stroke: $primary-text-color;
 
+  cursor: pointer;
+
   &:hover,
-  &:focus {
+  &:focus,
+  .active + & {
     stroke: $current-color;
     color: $current-color;
   }
@@ -141,12 +137,16 @@
   margin-bottom: 4px;
 }
 
+.schedule-item-list {
+  display: none;
+}
+
 .schedule-item-text {
   display: flex;
 
   font-family: 'NotoSerifTC';
   font-size: 16px;
-  line-height: 2;
+  line-height: 1.9;
 
   color: $primary-text-color;
 
@@ -161,4 +161,18 @@
   @media screen and (min-width: $laptop) {
     margin-right: 33px;
   }
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: black;
+}
+
+.active .schedule-item-list {
+  display: block;
+}
+
+.active .svg-wrapper {
+  stroke: $current-color;
+  color: $current-color;
 }

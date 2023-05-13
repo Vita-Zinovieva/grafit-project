@@ -26,6 +26,7 @@ if (clientWidth >= 1920) {
   swiperWidth = 704;
   slidesPerView = 2;
   spaceBetween = 16;
+  arrows = false;
 
   size = 20;
   top = 212 + size;
@@ -36,7 +37,6 @@ if (clientWidth >= 1920) {
   spaceBetween = 16;
   arrows = false;
 }
-console.log(swiperWidth);
 
 // Swiper initialization with breakpoints values:
 
@@ -68,6 +68,6 @@ swiper.navigation.prevEl[0].style.height = `${size}px`;
 
 swiperRef.style = `width: ${swiperWidth}px; position:static`;
 if (!arrows) {
-  swiper.navigation.nextEl[0].style = `display: none;`;
+  swiper.navigation.nextEl[0].style = `display: none; fill="black"; color="black"`;
   swiper.navigation.prevEl[0].style = `display: none`;
 }
