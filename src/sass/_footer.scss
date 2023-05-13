@@ -12,6 +12,8 @@ footer {
   width: 390px;
   margin: 0;
   height: auto;
+  justify-content: center;
+  align-items: center;
 
   @media screen and (min-width: 767px) {
     width:auto;
@@ -36,6 +38,7 @@ footer {
     width: 302px;
     height: 365px;
   } 
+  
 }
 
 .footer-contact {
