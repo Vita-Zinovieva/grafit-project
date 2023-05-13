@@ -1,82 +1,57 @@
-const tabsRef = document.querySelectorAll('.svg-wrapper');
-const textsRefs = document.querySelectorAll('.schedule-item-list');
-const listRef = document.querySelector('.schedule-list');
-
-const checkedSchedule = {
-  monday: false,
-  tuesday: false,
-  wednesday: false,
-  thursday: false,
-  friday: false,
-  saturday: false,
+const refs = {
+  list: document.querySelector('.schedule-list'),
+  items: document.querySelectorAll('.schedule-item'),
 };
 
-setActiveClasses();
+const checkedSchedule = getLocalStorage();
 
-listRef.addEventListener('click', onScheduleClick);
+function initModel() {
+  refs.items.forEach((e, i) => {
+    const days = Object.keys(checkedSchedule);
+    e.setAttribute('data-day', days[i]);
+  });
+}
 
-function onScheduleClick(e) {
-  let currentElement;
+function setItemsView() {
+  refs.items.forEach((e, i) => {
+    const { day } = e.dataset;
+    if (checkedSchedule[day]) {
+      e.classList.add('active');
+    } else {
+      e.classList.remove('active');
+    }
+  });
+}
 
-  if (
-    e.target.nodeName === 'svg' ||
-    e.target.className === 'schedule-svg-text'
-  ) {
-    textsRefs.forEach((el, i) => {
-      if (e.target.textContent.trim() === el.dataset.id) {
-        currentElement = el;
-      }
-    });
-
-    currentElement.parentElement.classList.toggle('active');
-    toggleSchedule(currentElement.dataset.id);
-    setLocalstorage('activeSchedule', checkedSchedule);
-
+function toggleSchedule(e) {
+  if (e.target.parentNode.className !== 'svg-wrapper') {
     return;
   }
+  const day = e.target.parentNode.parentNode.dataset.day;
+  checkedSchedule[day] = !checkedSchedule[day];
+  window.localStorage.setItem('schedule', JSON.stringify(checkedSchedule));
+  setItemsView();
 }
 
-function setLocalstorage(key, value) {
+function getLocalStorage() {
   try {
-    window.localStorage.setItem(key, JSON.stringify(value));
+    const checkedScheduleModel = {
+      monday: false,
+      tuesday: false,
+      wednesday: false,
+      thursday: false,
+      friday: false,
+      saturday: false,
+    };
+
+    const data = window.localStorage.getItem('schedule');
+    return data ? JSON.parse(data) : checkedScheduleModel;
   } catch (error) {
-    console.error('Set state error: ', error.message);
+    console.log(error.message);
   }
 }
 
-function getLocaleStorage(key) {
-  try {
-    const data = window.localStorage.getItem(key);
-    return data === null ? undefined : JSON.parse(data);
-  } catch (error) {
-    console.error('Set state error: ', error.message);
-  }
-}
+refs.list.addEventListener('click', toggleSchedule);
 
-function toggleSchedule(day) {
-  switch (day) {
-    case 'ПН':
-      checkedSchedule.monday = !checkedSchedule.monday;
-      break;
-    case 'ВТ':
-      checkedSchedule.tuesday = !checkedSchedule.tuesday;
-      break;
-    case 'СР':
-      checkedSchedule.wednesday = !checkedSchedule.wednesday;
-      break;
-    case 'ЧТ':
-      checkedSchedule.thursday = !checkedSchedule.thursday;
-      break;
-    case 'ПТ':
-      checkedSchedule.friday = !checkedSchedule.friday;
-      break;
-    case 'СБ':
-      checkedSchedule.saturday = checkedSchedule.saturday;
-      break;
-
-    default:
-      break;
-  }
-}
-
-function setActiveClasses() {}
+initModel();
+setItemsView();
