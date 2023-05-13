@@ -1,17 +1,36 @@
-<footer class="footer" id="footer">
-  <div class="footer-container">
+<footer class="footer" >
+  <div class="footer-container container">
 
     <div class="footer-map">
-      <picture>
-        <source media="(min-width: 1920px)" srcset="./images/map1920@1x.png 1x, ./images/map1920@2x.png 2x" />
-        <source media="(min-width: 1440px)" srcset="./images/map1440@1x.png 1x, ./images/map1440@2x.png 2x" />
-        <source media="(min-width: 768px)" srcset="./images/map768@1x.png 1x, ./images/map768@2x.png 2x" />
-        <source media="(min-width: 390px)" srcset="./images/map390@1x.png 1x, ./images/map390@2x.png 2x" />
-        <a href="https://maps.app.goo.gl/wXFjqQV4PtYURDxM6?g_st=it" target="_blank" rel="noopener noreferrer nofollow">
+      <a href="https://maps.app.goo.gl/wXFjqQV4PtYURDxM6?g_st=it" 
+          target="_blank" rel="noopener noreferrer nofollow">
+        <picture>
+          <source type="image/png"
+            media="(min-width: 1920px)"
+            srcset="./images/map1920@1x.png, ./images/map1920@2x.png 2x"
+            sizes="(min-width: 1920px) 302px, 100vw"
+          >
+          <source type="image/png"
+            media="(min-width: 1440px)"
+            srcset="./images/map1440@1x.png, ./images/map1440@2x.png 2x"
+            sizes="(min-width: 1440px) 302px, 100vw"
+          >
+          <source type="image/png"
+            media="(min-width: 768px)"
+            srcset="./images/map768@1x.png, ./images/map768@2x.png 2x"
+            sizes="(min-width: 768px) 159px, 100vw"
+          >
+          <source type="image/png"
+            media="(min-width: 390px)"
+            srcset="./images/map390@1x.png, ./images/map390@2x.png 2x"
+            sizes="(min-width: 390px) 113px, 100vw" 
+          >
           <img src="./images/map390@1x.png" alt="map" width="100%" height="100%">
-        </a>
-      </picture>
+       
+        </picture>
+      </a>
     </div>
+
     <div class="footer-contact">
       <div class="footer-adress">
         <ul class="footer-adress_list">
