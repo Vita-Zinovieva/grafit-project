@@ -159,8 +159,8 @@
 
 
 .abonement_buy {
-  margin-left: 16px;
-  width: 171px;
+  //margin-left: 16px;
+   max-width: 171px;
   @media screen and (min-width: $tablet){
    position: absolute;
    height: 172px;
