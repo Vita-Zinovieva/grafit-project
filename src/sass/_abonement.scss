@@ -54,6 +54,8 @@
       width: 344px;
       height: 172px;
       margin-bottom: 0px;
+      display: flex;
+  
     }
     @media screen and (min-width: $laptop){
       width: 411px;
@@ -132,42 +134,48 @@
   line-height: 2;
   color: $primary-text-color;
   position: absolute;
-  margin: 24px 2px 24px 0;
   z-index: 3;
-  padding-left: 20px;
-  top: 0;
-  left: 0;
+  top: 25;
+  left: 20px;
   text-align: center;
-  
+    
   @media screen and (min-width: $tablet){
-    margin: 54px 55px 54px 0;
+    top:54px;
+    width: 109px;
+    height: 64px;
+    left: 0;
   }
   @media screen and (min-width: $laptop){
-    margin: 70px 84px 70px 0;
+    top:70px;
     width: 109px;
     height: 64px;
   }
   @media screen and (min-width: $desktop){
-    margin: 70px 162px 70px 0;
-    width: 109px;
-    height: 64px;
     font-size: 20px;
+    width: 123px;
   }
 
 }
+
+
 .abonement_buy {
   margin-left: 16px;
   width: 171px;
   @media screen and (min-width: $tablet){
-    margin-left: 181px;
+   position: absolute;
+   height: 172px;
+   bottom: 0px;
+   right: 0;
+    width: 180px;
+    margin: 0px;
   }
   @media screen and (min-width: $laptop){
-    width: 193px;
-    margin-left: 218px;
+    width: 218px;
+    height: 204px;
   }
   @media screen and (min-width: $desktop){
     width: 299px;
-    margin-left: 296px;
+    
   }
 }
 .abonement_price {
@@ -184,22 +192,23 @@
   display: flex;
   justify-content: center;
     @media screen and (min-width: $tablet){
-      left: 180px;
+      left: 15px;
       top: 52px;
     }
+      
     @media screen and (min-width: $laptop){
       width: 145px;
       height: 32px;
-      left: 218px;
+      left: 24px;
       top: 69px;
+      
     }
     @media screen and (min-width: $desktop){
       font-size: 24px;
       line-height: 1.3;
       width: 145px;
       height: 32px;
-      left: 296px;
-      
+            
     }
 
 }
@@ -225,19 +234,18 @@
    
     @media screen and (min-width: $tablet){
       width: 164px;
-      bottom: 30px;
+      position: absolute;
+      top: 107px;
     }
     @media screen and (min-width: $laptop){
       width: 145px;
-      margin: 125px 48px 35px 218px;
-      bottom: 0px;
-      
+      height: 44px;
+      left: 24px;
+      top: 125px;
     }
     @media screen and (min-width: $desktop){
-      height: 44px;
-      margin: 125px 129px 35px 296px;
-      bottom: 0px;
-      
+      left: 25px;
+      top: 125px;
     }
  
 }
