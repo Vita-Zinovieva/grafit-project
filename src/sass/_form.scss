@@ -124,7 +124,6 @@ input[type='number']:focus {
 
 .form-btn {
   margin: 0 auto;
-  padding: 8px 24px;
   width: 273px;
   height: 37px;
   font-size: 16px;
@@ -156,8 +155,6 @@ input[type='number']:focus {
     width: 422px;
     height: 316px;
   }
-}
-.img {
 }
 
 /**
@@ -192,8 +189,8 @@ input[type='number']:focus {
     height: 404px;
   }
   @media screen and (min-width: $laptop) {
-    width: 1116px;
-    height: 397px;
+    width: 1150px;
+    height: 406px;
   }
 }
 
