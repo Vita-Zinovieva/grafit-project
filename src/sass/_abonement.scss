@@ -5,9 +5,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-    @media screen and (min-width: $laptop){
-     // margin: 120px 0 120px 0;
-  
+  @media screen and (min-width: $laptop) {
+    // margin: 120px 0 120px 0;
   }
 }
 
@@ -19,25 +18,24 @@
   letter-spacing: 5px;
   color: $primary-text-color;
   text-align: center;
- // margin-bottom: 48px;
+  // margin-bottom: 48px;
   padding-bottom: 48px;
   letter-spacing: 5px;
-  
-  @media screen and (min-width: $tablet){
+
+  @media screen and (min-width: $tablet) {
     //margin-bottom: 56px;
     padding-bottom: 56px;
     letter-spacing: 15px;
   }
 
-  @media screen and (min-width: $laptop){
+  @media screen and (min-width: $laptop) {
     font-size: 24px;
     line-height: calc(32 / 24);
     //margin-bottom: 80px;
     padding-bottom: 80px;
     letter-spacing: 29px;
   }
- }
-
+}
 
 .abonevent_variant {
   width: 358px;
@@ -47,31 +45,29 @@
   position: relative;
   display: flex;
   justify-content: space-around;
-    &:last-child{
-      margin-bottom: 0;
-    }
-    @media screen and (min-width: $tablet){
-      width: 344px;
-      height: 172px;
-      margin-bottom: 0px;
-      display: flex;
-  
-    }
-    @media screen and (min-width: $laptop){
-      width: 411px;
-      height: 201px;
-      margin-bottom: 0px;
-    }
-    @media screen and (min-width: $desktop){
-      width: 570px;
-      height: 204px;
-      margin-bottom: 0px;
-    }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 344px;
+    height: 172px;
+    margin-bottom: 0px;
+    display: flex;
+  }
+  @media screen and (min-width: $laptop) {
+    width: 411px;
+    height: 204px;
+    margin-bottom: 0px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 570px;
+    height: 204px;
+    margin-bottom: 0px;
+  }
 }
 
-.abonement_grid{
+.abonement_grid {
   @media screen and (min-width: $tablet) {
-  
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -81,7 +77,6 @@
     height: 575px;
   }
   @media screen and (min-width: $laptop) {
-  
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -89,7 +84,7 @@
     width: 1281px;
     height: 432px;
   }
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     width: 1758px;
   }
 }
@@ -101,31 +96,99 @@
   position: absolute;
   left: 0;
   top: 0;
- // bottom: 10;
-  background-size: cover;
-    @media screen and (min-width: $tablet){
-      width: 164px;
-      height: 172px;}
-    @media screen and (min-width: $laptop){
-      width: 193px;
-      height: 204px;
-    }
-    @media screen and (min-width: $desktop){
-      width: 271px;
-     
-    }
+  background-size: contain;
+  outline: 1px solid green;
+  background-image: url(../images/icons/abonements/ellipse1-390.svg);
+  background-repeat: no-repeat;
+  @media screen and (min-width: $tablet) {
+    background-image: url(../images/icons/abonements/ellipse1-768.svg);
+    width: 164px;
+    height: 172px;
+  }
+  @media screen and (min-width: $laptop) {
+    width: 193px;
+    height: 204px;
+    background-image: url(../images/icons/abonements/ellipse1-1440.svg);
+  }
+  @media screen and (min-width: $desktop) {
+    width: 271px;
+    background-image: url(../images/icons/abonements/ellipse1-1920.svg);
+  }
+}
+.abonevent_variant:nth-child(2) .abonement_card {
+  @media screen and (min-width: $tablet) {
+    background-image: url(../images/icons/abonements/ellipse2-768.svg);
+  }
+  @media screen and (min-width: $laptop) {
+    background-image: url(../images/icons/abonements/ellipse2-1440.svg);
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url(../images/icons/abonements/ellipse2-1920.svg);
+  }
+}
+.abonevent_variant:nth-child(3) .abonement_card {
+  background-image: url(../images/icons/abonements/ellipse3-390.svg);
+
+  @media screen and (min-width: $tablet) {
+    background-image: url(../images/icons/abonements/ellipse3-768.svg);
+  }
+  @media screen and (min-width: $laptop) {
+    background-image: url(../images/icons/abonements/ellipse3-1440.svg);
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url(../images/icons/abonements/ellipse3-1920.svg);
+  }
+}
+.abonevent_variant:nth-child(4) .abonement_card {
+  background-image: url(../images/icons/abonements/ellipse4-390.svg);
+
+  @media screen and (min-width: $tablet) {
+    background-image: url(../images/icons/abonements/ellipse4-768.svg);
+  }
+  @media screen and (min-width: $laptop) {
+    background-image: url(../images/icons/abonements/ellipse4-1440.svg);
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url(../images/icons/abonements/ellipse4-1920.svg);
+  }
 }
 
-.abonement-icon{
+.abonevent_variant:nth-child(5) .abonement_card {
+  background-image: url(../images/icons/abonements/ellipse5-390.svg);
+
+  @media screen and (min-width: $tablet) {
+    background-image: url(../images/icons/abonements/ellipse5-768.svg);
+  }
+  @media screen and (min-width: $laptop) {
+    background-image: url(../images/icons/abonements/ellipse5-1440.svg);
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url(../images/icons/abonements/ellipse5-1920.svg);
+  }
+}
+.abonevent_variant:nth-child(6) .abonement_card {
+  background-image: url(../images/icons/abonements/ellipse6-390.svg);
+
+  @media screen and (min-width: $tablet) {
+    background-image: url(../images/icons/abonements/ellipse6-768.svg);
+  }
+  @media screen and (min-width: $laptop) {
+    background-image: url(../images/icons/abonements/ellipse6-1440.svg);
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url(../images/icons/abonements/ellipse6-1920.svg);
+  }
+}
+
+.abonement-icon {
   width: 100%;
-  height: 100%; 
+  height: 100%;
   display: flex;
   justify-content: center;
   position: absolute;
   left: 0;
   top: 0;
   background-size: cover;
-  
 }
 .abonement_info {
   font-family: 'NotoSerifTC';
@@ -138,31 +201,30 @@
   top: 25;
   left: 20px;
   text-align: center;
-    
-  @media screen and (min-width: $tablet){
-    top:54px;
+
+  @media screen and (min-width: $tablet) {
+    top: 54px;
     width: 109px;
     height: 64px;
     left: 0;
   }
-  @media screen and (min-width: $laptop){
-    top:70px;
+  @media screen and (min-width: $laptop) {
+    top: 70px;
     width: 109px;
     height: 64px;
   }
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     font-size: 20px;
     width: 123px;
   }
-
 }
 .abonement_buy {
-    width: 187px;
-    height: 112px;
-    position: absolute;
-    right: 0;
-    bottom: 0px;
-  @media screen and (min-width: $tablet){
+  width: 187px;
+  height: 112px;
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  @media screen and (min-width: $tablet) {
     position: absolute;
     height: 172px;
     bottom: 0px;
@@ -170,13 +232,12 @@
     width: 180px;
     margin: 0px;
   }
-  @media screen and (min-width: $laptop){
+  @media screen and (min-width: $laptop) {
     width: 218px;
     height: 204px;
   }
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     width: 299px;
-    
   }
 }
 .abonement_price {
@@ -185,33 +246,30 @@
   font-size: 20px;
   line-height: 1.6;
   color: $primary-text-color;
-  
+
   position: absolute;
   width: 164px;
   left: 16px;
   top: 24px;
   display: flex;
   justify-content: center;
-    @media screen and (min-width: $tablet){
-      left: 15px;
-      top: 52px;
-    }
-      
-    @media screen and (min-width: $laptop){
-      width: 145px;
-      height: 32px;
-      left: 24px;
-      top: 69px;
-      
-    }
-    @media screen and (min-width: $desktop){
-      font-size: 24px;
-      line-height: 1.3;
-      width: 145px;
-      height: 32px;
-            
-    }
+  @media screen and (min-width: $tablet) {
+    left: 15px;
+    top: 52px;
+  }
 
+  @media screen and (min-width: $laptop) {
+    width: 145px;
+    height: 32px;
+    left: 24px;
+    top: 69px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 24px;
+    line-height: 1.3;
+    width: 145px;
+    height: 32px;
+  }
 }
 .abonement_btn {
   font-family: 'NotoSerifTC';
@@ -220,11 +278,11 @@
   line-height: 2;
   color: $primary-text-color;
   background-color: $current-color;
-    &:hover{
-      border: 1px solid $icon-disable;
-      background-color: $footer-text-color;
-    }
-  
+  &:hover {
+    border: 1px solid $icon-disable;
+    background-color: $footer-text-color;
+  }
+
   border-radius: 2px;
   position: absolute;
   width: 171px;
@@ -232,23 +290,22 @@
   right: 0px;
   bottom: 9px;
   text-align: center;
-   
-    @media screen and (min-width: $tablet){
-      width: 164px;
-      position: absolute;
-      top: 107px;
-    }
-    @media screen and (min-width: $laptop){
-      width: 145px;
-      height: 44px;
-      left: 24px;
-      top: 125px;
-    }
-    @media screen and (min-width: $desktop){
-      left: 25px;
-      top: 125px;
-    }
- 
+
+  @media screen and (min-width: $tablet) {
+    width: 164px;
+    position: absolute;
+    top: 107px;
+  }
+  @media screen and (min-width: $laptop) {
+    width: 145px;
+    height: 44px;
+    left: 24px;
+    top: 125px;
+  }
+  @media screen and (min-width: $desktop) {
+    left: 25px;
+    top: 125px;
+  }
 }
 .abonement_day {
   font-family: 'NotoSerif';
@@ -259,27 +316,26 @@
   display: flex;
   align-items: center;
   color: $footer-background-color;
-  
+
   position: absolute;
   width: 95px;
   height: 24px;
   left: 20px;
   top: 55px;
-  @media screen and (min-width: $tablet){
+  @media screen and (min-width: $tablet) {
     left: 249px;
     top: 4px;
   }
-  @media screen and (min-width: $laptop){
+  @media screen and (min-width: $laptop) {
     line-height: 2.4px;
     width: 109px;
     left: 302px;
     top: 8px;
   }
-  @media screen and (min-width: $desktop){
+  @media screen and (min-width: $desktop) {
     line-height: 2.4px;
     width: 95px;
     left: 467px;
     top: 8px;
   }
-
 }
