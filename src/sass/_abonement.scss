@@ -156,16 +156,17 @@
   }
 
 }
-
-
 .abonement_buy {
-  //margin-left: 16px;
-   max-width: 171px;
+    width: 187px;
+    height: 112px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
   @media screen and (min-width: $tablet){
-   position: absolute;
-   height: 172px;
-   bottom: 0px;
-   right: 0;
+    position: absolute;
+    height: 172px;
+    bottom: 0px;
+    right: 0;
     width: 180px;
     margin: 0px;
   }
@@ -187,7 +188,7 @@
   
   position: absolute;
   width: 164px;
-  left: 187px;
+  left: 16px;
   top: 24px;
   display: flex;
   justify-content: center;
