@@ -268,13 +268,15 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 2;
-  color: $primary-text-color;
-  background-color: $current-color;
-  cursor: pointer;
-  &:hover {
+  background-color: $form-background-color;
+  border: 2px solid $form-background-color;
+  color: $icon-disable;
+  /*cursor: pointer;
+   &:hover {
     border: 1px solid $icon-disable;
-    background-color: $footer-text-color;
-  }
+    background-color: $btn-disable;
+    color: $icon-disable;
+  } */
 
   border-radius: 2px;
   position: absolute;
