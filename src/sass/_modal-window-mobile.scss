@@ -2,13 +2,13 @@
   z-index: 100;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
   background-color: $current-color;
 
   display: flex;
   flex-direction: column;
 
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 
@@ -21,6 +21,7 @@
 
   @media screen and (min-width: $tablet) {
     width: 100%;
+    height: 100vh;
     background-image: url('../images/tablet-bgc.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -34,6 +35,7 @@
 
   width: 20px;
   height: 20px;
+  fill: $primary-text-color;
 
   @media screen and (min-width: $tablet) {
     top: 52.55px;
