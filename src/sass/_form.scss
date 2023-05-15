@@ -91,13 +91,16 @@ input[type='number']:focus {
 }
 
 .form-input {
+  width: 240px;
   background-color: transparent;
   outline: none;
   font-size: 14px;
   line-height: 2.28;
   font-family: 'NotoSerifTC';
   padding-left: 10px;
-  // width: 200px;
+  @media screen and (min-width: $tablet) {
+    width: auto;
+  }
 }
 
 .form-error-message {
@@ -128,9 +131,16 @@ input[type='number']:focus {
   height: 37px;
   font-size: 16px;
   font-family: 'NotoSerifTC';
-  background-color: #e2e001;
+  background-color: $current-color;
   border-radius: 2px;
   cursor: pointer;
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $current-color;
+    border: 1px solid $current-color;
+    outline: none;
+  }
 
   @media screen and (min-width: $tablet) {
     width: 167px;
