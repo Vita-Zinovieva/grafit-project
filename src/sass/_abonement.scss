@@ -238,14 +238,15 @@
   font-size: 20px;
   line-height: 1.6;
   color: $primary-text-color;
-
   position: absolute;
-  width: 164px;
+  width: 171px;
   left: 16px;
   top: 24px;
   display: flex;
   justify-content: center;
+  
   @media screen and (min-width: $tablet) {
+    width: 164px;
     left: 15px;
     top: 52px;
   }
