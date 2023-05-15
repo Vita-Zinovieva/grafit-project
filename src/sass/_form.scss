@@ -91,13 +91,16 @@ input[type='number']:focus {
 }
 
 .form-input {
+  width: 240px;
   background-color: transparent;
   outline: none;
   font-size: 14px;
   line-height: 2.28;
   font-family: 'NotoSerifTC';
   padding-left: 10px;
-  // width: 200px;
+  @media screen and (min-width: $tablet) {
+    width: auto;
+  }
 }
 
 .form-error-message {
