@@ -29,32 +29,6 @@ function closeModal() {
   errorText.classList.add('is-hidden');
 }
 
-/**
- First option of EmailSend----------------------------------------------------------------------
-*/
-
-// window.onload = function () {
-//     document.getElementById("contact-form").addEventListener("submit", function (e) {
-//         e.preventDefault();
-//         // generate a five digit number for the contact_number variable
-//         // this.contact_number.value = (Math.random() * 100000) | 0;
-//         // these IDs from the previous steps
-//         emailjs.sendForm("service_fje974l", "template_ibkoj2", "#contact-form", "xmlBchw7yqEYG683_").then(
-//             function () {
-//                 console.log("SUCCESS!");
-//                 modal.classList.remove("is-hidden");
-//             },
-//             function (error) {
-//                 console.log("FAILED...", error);
-//             }
-//         );
-//     });
-// };
-
-/**
-  Second option of EmailSend----------------------------------------------------------------------
-*/
-
 form.addEventListener('submit', getAllvalues);
 
 function getAllvalues(e) {
