@@ -200,21 +200,15 @@
   top: 25;
   left: 20px;
   text-align: center;
+  
 
   @media screen and (min-width: $tablet) {
-    top: 54px;
-    width: 109px;
-    height: 64px;
-    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
-  @media screen and (min-width: $laptop) {
-    top: 70px;
-    width: 109px;
-    height: 64px;
-  }
+  
   @media screen and (min-width: $desktop) {
     font-size: 20px;
-    width: 123px;
   }
 }
 .abonement_buy {
@@ -277,6 +271,7 @@
   line-height: 2;
   color: $primary-text-color;
   background-color: $current-color;
+  cursor: pointer;
   &:hover {
     border: 1px solid $icon-disable;
     background-color: $footer-text-color;
