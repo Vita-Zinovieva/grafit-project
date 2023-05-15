@@ -20,7 +20,15 @@
   align-items: center;
   justify-content: center;
 
-  margin: 120px auto;
+  margin: 64px auto;
+
+  @media screen and (min-width: $tablet) {
+    margin: 96px auto;
+  }
+
+  @media screen and (min-width: $laptop) {
+    margin: 120px auto;
+  }
 }
 
 .gallery__title {
