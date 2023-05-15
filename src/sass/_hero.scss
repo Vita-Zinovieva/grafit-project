@@ -114,11 +114,16 @@
 }
 
 .hero_btn:hover,
-.hero_btn:focus,
-.hero_btn:active {
+.hero_btn:focus {
   border: 1px solid $primary-text-color;
   color: $primary-text-color;
-  background-color: #fff;
+  background-color: transparent;
+}
+
+.hero_btn:active {
+  border: 1px solid transparent;
+  color: $primary-text-color;
+  background-color: transparent;
 }
 
 .logo_link {
