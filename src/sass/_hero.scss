@@ -127,6 +127,9 @@
 }
 
 .logo_link {
+  display: flex;
+  justify-content: center;
+
   padding-left: 118px;
   padding-right: 118px;
   padding-bottom: 150px;
