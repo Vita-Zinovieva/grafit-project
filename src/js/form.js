@@ -53,12 +53,7 @@ function getAllvalues(e) {
 
     // send email
     emailjs
-      .send(
-        'service_i0hyi9fд',
-        'template_lxiirpx',
-        formObj,
-        'T3jPomcN80veILDDH'
-      )
+      .send('service_i0hyi9f', 'template_lxiirpx', formObj, 'T3jPomcN80veILDDH')
       .then(
         function () {
           spiner.classList.add('is-hidden');
