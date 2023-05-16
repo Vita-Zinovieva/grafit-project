@@ -165,13 +165,21 @@
   padding: 0px 26px;
 
   @media screen and (min-width: $laptop) {
+    height: 100px;
     padding: 0px;
   }
 }
 
 .schedule-list-item {
   transition: transform 500ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  transform: translateX(-130%);
+
+  @media screen and (max-width: $tabletMax) {
+    transform: translateX(-130%);
+  }
+
+  @media screen and (min-width: $laptop) {
+    transform: translateY(-500%);
+  }
 }
 
 .schedule-list-item:not(:last-child) {
@@ -207,6 +215,7 @@
 
 .active .schedule-list-item {
   transform: translateX(0);
+  transform: translateY(0);
 }
 
 .active .svg-wrapper {
